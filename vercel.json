@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/ghost.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/ghost",
+      "dest": "/api/ghost.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/ghost.py"
+    }
+  ]
+}
